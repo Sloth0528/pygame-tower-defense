@@ -1,4 +1,4 @@
-from asset_loader import load_asset_image
+from asset_loader import load_asset_image, resource_path
 import pygame, sys
 from button import Interactive_button
 
@@ -6,7 +6,7 @@ from button import Interactive_button
 class StartMenu:
     def __init__(self, screen:pygame.Surface):
         self.screen = screen
-        self.image = load_asset_image("assets/start_menu_bg.png").convert()
+        self.image = load_asset_image('assets/start_menu_bg.png').convert()
         self.image = pygame.transform.scale(self.image, (900,400))
         self.rect = self.image.get_rect(topleft=(0,0))
 

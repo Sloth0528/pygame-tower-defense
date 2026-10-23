@@ -1,4 +1,4 @@
-from asset_loader import load_asset_image
+from asset_loader import load_asset_image, resource_path
 import pygame
 from button import Interactive_button
 

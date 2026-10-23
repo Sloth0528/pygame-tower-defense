@@ -1,4 +1,4 @@
-from asset_loader import load_asset_image
+from asset_loader import load_asset_image, resource_path
 import pygame, sys
 from button import Interactive_button
 
@@ -79,7 +79,7 @@ class Characters_menu:
 
         temp = self.set_character_surf("birdani/kiwi_bird_1.png")
         self.characters.add(Characters_info(
-            location=(100,300),
+            location=(100,150),
             font=pygame.font.SysFont(None,40),
             text="",
             button_surf=temp[0],
@@ -89,7 +89,7 @@ class Characters_menu:
 
         temp = self.set_character_surf("birdani/kiwi_bird_attack_1.png")
         self.characters.add(Characters_info(
-            location=(270,300),
+            location=(100,300),
             font=pygame.font.SysFont(None,40),
             text="",
             button_surf=temp[0],
@@ -97,14 +97,24 @@ class Characters_menu:
             info_text=["attack=8", "attack speed=0.5", "hp=25", "move speed=1.0", "attack range=150"]
         ))
 
-        temp = self.set_character_surf("birdani/kiwi_boss_1.png")
+        temp = self.set_character_surf("birdani/kiwi_boss_walk_1.png")
+        self.characters.add(Characters_info(
+            location=(270,300),
+            font=pygame.font.SysFont(None,40),
+            text="",
+            button_surf=temp[0],
+            hover_button_surf=temp[1],
+            info_text=["attack=30", "attack speed=0.5", "hp=150", "move speed=1.0", "attack range=40"]
+        ))
+
+        temp = self.set_character_surf("birdani/kamakaze_bird_walk_1.png")
         self.characters.add(Characters_info(
             location=(440,300),
             font=pygame.font.SysFont(None,40),
             text="",
             button_surf=temp[0],
             hover_button_surf=temp[1],
-            info_text=["attack=30", "attack speed=0.5", "hp=150", "move speed=1.0", "attack range=40"]
+            info_text=["attack=200", "attack speed=NAN", "hp=30", "move speed=1.0", "attack range=20"]
         ))
 
         temp = self.set_character_surf("mushrooms/mushroom_walk_1.png")

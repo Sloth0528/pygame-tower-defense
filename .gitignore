@@ -9,3 +9,7 @@ __pycache__/
 Thumbs.db
 *.mp4
 *.zip
+
+*.exe
+build/
+dist/
